@@ -132,6 +132,13 @@ article {
     }
     }
 }
+.buton {
+    background-color: $text-dark; /* verde */
+    border-radius: 12px;
+    padding: 10px 20px;
+    color: white;
+    text-align: center;
+}
 
 footer {
     background-color: $dark-bg;

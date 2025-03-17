@@ -94,8 +94,16 @@ article:hover {
   margin-left: -1rem;
 }
 
+.buton {
+  background-color: #000000; /* verde */
+  border-radius: 12px;
+  padding: 10px 20px;
+  color: white;
+  text-align: center;
+}
+
 footer {
-  background-color: linear-gradient(blue, pink);
+  background-color: #343a40;
   color: #ffffff;
   text-align: center;
   padding: 1.5rem 0;
