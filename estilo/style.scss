@@ -1,0 +1,154 @@
+// Definir colores
+$rojo: #b22222; // Rojo oscuro para resaltar
+$negro: #222; // Negro suave para contraste
+$beige: #f5f1e8; // Beige claro para equilibrio
+$blanco: #fff;
+$gris: #444;
+$primary-color: #cc0f2215;
+$secondary-color: #5a6269;
+$light-bg: #f8f9fa;
+$dark-bg: #343a40;
+$text-light: #ffffff;
+$text-dark: #000000;
+
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: $light-bg;
+    color: $text-dark;
+}
+
+
+// Navbar
+.navbar {
+    background-color: $rojo !important;
+
+    .navbar-brand {
+        color: $blanco !important;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+
+        img {
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+    }
+
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                color: $text-dark;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: darken($light-bg, 10%);
+                }
+            }
+        }
+    }
+}
+
+
+// Estilos del contenido principal
+main {
+    background-color: lighten($beige, 5%);
+    padding: 2rem 0 20px; 
+    border-radius: 10px;
+    text-align: justify;
+}
+
+h2 {
+    color: $rojo;
+}
+
+// Sección de productos
+section {
+    background-color: $primary-color;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+article {
+    border: 2px solid $rojo;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: lighten($rojo, 40%);
+    transition: transform 0.3s;
+
+    &:hover {
+    transform: scale(1.05);
+    }
+}
+
+
+// Cards de recetas NO TOCAR NADA
+.card {
+    border: none;
+    transition: transform 0.3s ease;
+
+    &:hover {
+    transform: scale(1.03);
+    }
+
+    .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    }
+
+    .card-body {
+    h3 {
+        color: $negro;
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    h4 {
+        color: $secondary-color;
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-top: 1rem;
+        }
+
+    ul {
+        padding-left: 1.5rem;
+
+        li {
+        list-style: none;
+        position: relative;
+        padding-left: 1.2rem;
+
+        &::before {
+            content: '\2022';
+            color: $rojo;
+            font-weight: bold;
+            display: inline-block;
+            width: 1rem;
+            margin-left: -1rem;
+        }
+        }
+    }
+    }
+}
+
+footer {
+    background-color: $dark-bg;
+    color: $text-light;
+    text-align: center;
+    padding: 1.5rem 0;
+
+    h3 {
+        color: $text-light;
+    }
+
+    a {
+        color: $text-light;
+        text-decoration: none;
+
+        &:hover {
+            color: lighten($rojo, 30%);
+        }
+    }
+}
